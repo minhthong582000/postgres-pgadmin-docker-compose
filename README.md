@@ -80,9 +80,7 @@ There are many way to access database running on docker host from a container. S
 
 -   On Docker for Linux:
 
-Run pgAdmin with the host mode.
-
-Change docker-compose configuration:
+Run pgAdmin with the host mode by changing docker-compose configuration to:
 
 > docker-compose.yaml
 
