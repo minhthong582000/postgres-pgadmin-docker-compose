@@ -33,12 +33,14 @@ PGADMIN_LISTEN_PORT=5050
 > postgres.env
 
 ```
-POSTGRES_PASSWORD=postgres
+POSTGRES_USER=pguser
+POSTGRES_PASSWORD=pgpassword
+POSTGRES_DB=pgdatabase
 ```
 
-You can change the value of email and password variables to whatever you want.
+You can change the value to whatever you want.
 
-Go to: [pgadmin-container-deployment](https://www.pgadmin.org/docs/pgadmin4/development/container_deployment.html#environment-variables) and [postgres-docker-hub](https://hub.docker.com/_/postgres?tab=description) to fill in any configurations that are important for you.
+For more information, go to [pgadmin-container-deployment](https://www.pgadmin.org/docs/pgadmin4/development/container_deployment.html#environment-variables) or [postgres-docker-hub](https://hub.docker.com/_/postgres?tab=description), and fill in any configurations that are important for you.
 
 To install it simply do following from your terminal:
 
@@ -61,9 +63,11 @@ Enter your email and password from pgadmin.env file
 Add a server with:
 
 ```
-Hostname: pgnetwork
-Username: postgres
-Password: your password from postgres.env, default: pgadmin
+Hostname: postgres
+Port: 5432
+Maintenance database: your database from postgres.env, default: pgdatabase
+Username: your username from postgres.env, default: pguser
+Password: your password from postgres.env, default: pgpassword
 ```
 
 ## Connect to PostgresSQL server
