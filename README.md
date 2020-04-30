@@ -61,7 +61,7 @@ Enter your email and password from pgadmin.env file
 Add a server with:
 
 ```
-Hostname: pgnetwork
+Hostname: postgres
 Username: postgres
 Password: your password from postgres.env, default: pgadmin
 ```
