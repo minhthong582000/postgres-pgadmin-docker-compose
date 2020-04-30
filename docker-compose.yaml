@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin
+        restart: always
+        env_file:
+            - ./pgadmin.env
+        ports:
+            - "5050:5050"
+        volumes:
+            - pga4volume:/var/lib/pgadmin
+        networks:
+            - pgnetwork
+    db:
+        image: postgres:alpine
+        container_name: postgres
+        restart: always
+        env_file:
+            - ./postgres.env
+        ports:
+            - "5432:5432"
+        volumes:
+            - psqlvolume:/var/lib/postgresql/data/
+        networks:
+            - pgnetwork
+volumes:
+    pga4volume:
+    psqlvolume:
+networks:
+    pgnetwork:
