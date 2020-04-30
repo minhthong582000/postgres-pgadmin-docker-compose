@@ -68,7 +68,7 @@ Password: your password from postgres.env, default: pgadmin
 
 ## Connect to PostgresSQL server
 
-Do following from your terminal:
+Open terminal on your local machine, run:
 
 ```
 psql -H localhost -p 5432 -U <your username>
