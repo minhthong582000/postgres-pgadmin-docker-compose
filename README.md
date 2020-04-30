@@ -20,7 +20,7 @@ cd postgres-pgadmin-docker-compose
 
 Before install, you need to pass environment variables from an external file to docker-compose.yaml within the ‘env_file’ option.
 
-Create 2 file in postgres-pgadmin-docker-compose directory named pgadmin.env and postgres.env, add the following:
+Create 2 files in postgres-pgadmin-docker-compose directory named pgadmin.env and postgres.env, add the following:
 
 > pgadmin.env
 
