@@ -1,8 +1,8 @@
 # Postgres-pgadmin-docker-compose
 
-## Getting Started
-
 A recipe to setup PostgreSQL and pgAdmin4 easily and quickly with Docker and Docker-compose.
+
+## Getting Started
 
 ### Prerequisites
 
