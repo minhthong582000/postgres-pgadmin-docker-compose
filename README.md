@@ -55,6 +55,7 @@ http://localhost:5050/
 ```
 
 You will see pgadmin login panel
+
 Enter your email and password from pgadmin.env file
 
 Add a server with:
