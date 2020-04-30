@@ -62,7 +62,7 @@ Add a server with:
 
 ```
 Hostname: pgnetwork
-Username: your username from postgres.env, default: youremail@something.com
+Username: postgres
 Password: your password from postgres.env, default: pgadmin
 ```
 
