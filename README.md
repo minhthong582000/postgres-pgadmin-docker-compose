@@ -70,6 +70,42 @@ Username: your username from postgres.env, default: pguser
 Password: your password from postgres.env, default: pgpassword
 ```
 
+### pgAdmin: Connect to Postgres database running on your local machine
+
+There are many way to access database running on docker host from a container. See [stack-overflow](https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach).
+
+-   On Docker for mac and Docker for windows:
+
+> Use hostname: host.docker.internal
+
+-   On Docker for Linux:
+
+Run pgAdmin with the host mode.
+
+Change docker-compose configuration:
+
+> docker-compose.yaml
+
+```
+version: "3.7"
+services:
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin
+        restart: always
+        env_file:
+            - ./pgadmin.env
+        ports:
+            - "5050:5050"
+        volumes:
+            - pga4volume:/var/lib/pgadmin
+        network_mode: host
+```
+
+Then
+
+> Use hostname: localhost
+
 ## Connect to PostgresSQL server
 
 Open terminal on your local machine, run:
