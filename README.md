@@ -75,7 +75,7 @@ Password: your password from postgres.env, default: pgpassword
 Open terminal on your local machine, run:
 
 ```
-psql -H localhost -p 5432 -U <your username>
+psql -h localhost -p 5432 -U <your username>
 ```
 
 ## Authors
